@@ -1,3 +1,5 @@
+#python 3.5.2
+
 from sklearn import preprocessing
 import numpy as np
 from scapy.all import *
@@ -65,50 +67,4 @@ for pkt in x:
         #     print(count)
         #     i = 0
         #     while (pkt[i].name != pkt.lastlayer().name):
-        #         if (pkt[i].name == 'Ethernet'):
-        #             tmp = pkt.getlayer(pkt[i].name).fields.values()
-        #             print(tmp)
-        #         elif (pkt[i].name == 'TCP'):
-        #             tmp = pkt.getlayer(pkt[i].name).fields.values()
-        #             print(tmp)
-        #         elif (pkt[i].name == 'UDP'):
-        #             tmp = pkt.getlayer(pkt[i].name).fields.values()
-        #             print(tmp)
-        #         elif (pkt[i].name == 'IP'):
-        #             tmp = pkt.getlayer(pkt[i].name).fields.values()
-        #             print(tmp)
-        #         elif (pkt[i].name == 'ICMP'):
-        #             tmp = pkt.getlayer(pkt[i].name).fields.values()
-        #             print(tmp)
-        #         elif (pkt[i].name == 'UDP in ICMP'):
-        #             tmp = pkt.getlayer(pkt[i].name).fields.values()
-        #             print(tmp)
-        #         elif (pkt[i].name == 'IP in ICMP'):
-        #             tmp = pkt.getlayer(pkt[i].name).fields.values()
-        #             print(tmp)
-        #         elif (pkt[i].name == 'Raw'):
-        #             tmp = pkt.getlayer(pkt[i].name).fields.values()
-        #             print(tmp)
-        #         elif (pkt[i].name == 'ARP'):
-        #             tmp = pkt.getlayer(pkt[i].name).fields.values()
-        #             print(tmp)
-        #         else:
-        #             print(pkt[i].name)
-        #
-        #         i += 1
-        #     count += 1
-        #     if count == 10:
-        #         break
-        #x[3232].getlayer(TCP).fields.values()
-        ####
-
-
-        #tmp=pkt.getlayer(pkt[i].name).fields.keys()
-            #tmp=list(tmp)
-            #listFieldsTmp.append(tmp)
-
-            #print(tmp)
-            #tmp = pkt.getlayer(pkt[i].name).fields.values()
-            #tmp=list(tmp)
-            #listValuesTmp.append(tmp)
-            #print(tmp)
+        
