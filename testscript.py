@@ -5,7 +5,7 @@ import numpy as np
 from scapy.all import *
 from sklearn.feature_extraction import DictVectorizer
 import pandas as pd
-
+import netaddr
 
 #loading the pcap file
 x=rdpcap('datasetSmall.pcap')
@@ -52,6 +52,18 @@ for pkt in x:
         #create a series type object with pkt dictinaries
         s[count] = pd.Series(pkt.fields)
         count+=1
+
+sNumeric=s
+i=0
+f=0
+for i in range(s.__len__()):
+    #f stands for fields
+   for f in range(s[i].__len__()):
+    if (netaddr.valid_ipv4(s[i][f])):
+        sNumeric[i][f] =int(netaddr.IPAddress(s[i][f]))
+        continue
+    if (netaddr.valid_mac(s[i][f])):
+        sNumeric[i][f]=int(s[i][f].replace(':', ''), 16)
 
 
 
